@@ -1,1 +1,324 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  margin: 2.5% 7.5%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* importing fonts */
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alata Regular'), local('Alata-Regular'), url(https://fonts.gstatic.com/s/alata/v1/PbytFmztEwbIoce9zqM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v14/0QIvMX1D_JOuMwr7Jg.ttf) format('truetype');
+}
+/* variables */
+/* styling */
+h1 {
+  font: 'Alata', sans-serif;
+  color: #808080;
+  font-size: 72px;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+h3 {
+  font: 'Alata', sans-serif;
+  color: #808080;
+  font-size: 16px;
+}
+p {
+  font: 'Lora', serif;
+  color: #2F4F4F;
+  font-size: 16px;
+  line-height: 20px;
+}
+a {
+  text-decoration: none;
+  font: 'Alata', sans-serif;
+  color: #808080;
+}
+body {
+  margin-bottom: 10%;
+}
+/* mix ins */
+/* nav section */
+.nav {
+  justify-content: space-between;
+  background-color: #F8F8FF;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid FFFF0;
+  padding: 2%;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .nav nav {
+    width: 75%;
+  }
+}
+.nav .name {
+  padding: 2.5%;
+  width: 20%;
+}
+/* intro section */
+.intro {
+  width: 100%;
+  height: 33vh;
+  justify-content: space-between;
+  display: flex;
+  justify-content: center;
+}
+.intro .intro-ls {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .intro .intro-ls {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+}
+.intro .intro-rs {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .intro .intro-rs {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+/* skills section*/
+.skills {
+  width: 100%;
+  height: 33vh;
+  justify-content: space-between;
+  background-color: #F8F8FF;
+  display: flex;
+  justify-content: center;
+}
+.skills .skills-ls {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .skills .skills-ls {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+}
+.skills .skills-rs {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .skills .skills-rs {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .skills {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* work history section */
+.work-history {
+  width: 100%;
+  height: 33vh;
+  justify-content: space-between;
+  display: flex;
+  justify-content: center;
+}
+.work-history .work-history-ls {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .work-history .work-history-ls {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+}
+.work-history .work-history-rs {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .work-history .work-history-rs {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .work-history {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* footer section */
+.footer {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: #F8F8FF;
+  height: 7.5vh;
+}
