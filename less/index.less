@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	margin: 2.5% 7.5%;
 }
 ol, ul {
 	list-style: none;
@@ -57,3 +58,195 @@ html, body {
     height: 100%;
 }
 
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css?family=Alata|Lora&display=swap');
+
+/* variables */
+@main-font:'Lora', serif;
+@main-font-color:#2F4F4F;
+@main-font-size: 16px;
+@title-font:'Alata', sans-serif;
+@title-font-color:#808080;
+@title-font-size: 72px;
+@center-color:FFFAF0;
+
+/* styling */
+
+h1 {
+	font: @title-font;
+	color: @title-font-color;
+	font-size: @title-font-size;
+	@media (max-width:500px) {
+		font-size: 40px;
+	}
+}
+
+h3 {
+	font: @title-font;
+	color: @title-font-color;
+	font-size: @main-font-size;
+}
+
+p {
+	font: @main-font;
+	color: @main-font-color;
+	font-size: @main-font-size;
+	line-height: 20px;
+}
+
+a {
+	text-decoration: none;
+	font: @title-font;
+	color: @title-font-color;
+}
+
+body {
+	margin-bottom: 10%;
+}
+
+/* mix ins */
+.center(){
+  	display:flex;
+  	justify-content:center;
+}
+.align-center(){
+	display:flex;
+	align-items: center;
+}
+.end(){
+	display:flex;
+	justify-content:flex-end;
+}
+.space-btw(){
+	display:flex;
+	justify-content:space-between;
+}
+.bordered(){
+  	border: 2px solid FFFF0;
+  	padding: 2%;
+}
+.background-color(){
+	background-color: #F8F8FF;
+}
+
+.section-width(){
+	width: 100%;
+}
+
+.section-height(){
+	height: 33vh;
+}
+
+/* nav section */
+
+.nav {
+	.space-btw();
+	.background-color();
+	width: 100%;
+	.align-center();
+	nav {
+		.space-btw();
+		.bordered();
+		width:45%;
+		@media (max-width:500px) {
+			width: 75%;
+		}
+	}
+	.name {
+		padding: 2.5%;
+		width: 20%
+	}
+}
+/* intro section */
+
+.intro {
+	.section-width();
+	.section-height();
+	.space-btw();
+	.center();
+	.intro-ls {
+		.align-center();
+		width:45%;
+		@media (max-width:500px) {
+			width: 100%;
+			padding-bottom: 5%;
+		}
+	}
+	.intro-rs {
+		.align-center();
+		width: 45%;
+		@media (max-width:500px) {
+			width: 100%;
+		}
+	}
+	@media (max-width:500px) {
+		flex-direction: column;
+	}
+}
+
+/* skills section*/
+
+.skills {
+	.section-width();
+	.section-height();
+	.space-btw();
+	.background-color();
+	.center();
+	.skills-ls {
+		.align-center();
+		width:45%;
+		@media (max-width:500px) {
+			width: 100%;
+			padding-bottom: 5%;
+		}
+	}
+	.skills-rs {
+		.align-center();
+		width: 45%;
+		@media (max-width:500px) {
+			width: 100%;
+		}
+	}
+	@media (max-width:500px) {
+		flex-direction: column;
+		.center();
+	}
+}
+
+/* work history section */
+
+.work-history {
+	.section-width();
+	.section-height();
+	.space-btw();
+	.center();
+	.work-history-ls {
+		.align-center();
+		width:45%;
+		@media (max-width:500px) {
+			width: 100%;
+			padding-bottom: 5%;
+		}
+	}
+	.work-history-rs {
+		.align-center();
+		width: 45%;
+		@media (max-width:500px) {
+			width: 100%;
+		}
+	}
+	@media (max-width:500px) {
+		flex-direction: column;
+		.center();
+	}
+}
+
+/* footer section */
+
+.footer {
+	.section-width();
+	.center();
+	.align-center();
+	.background-color();
+	height: 7.5vh;
+}
